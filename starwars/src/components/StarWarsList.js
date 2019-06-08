@@ -16,4 +16,4 @@ function StarWarsList(props) {
     );
 }
 
-export default StarWarsList;
+export default TodoList;
