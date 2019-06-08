@@ -20,6 +20,8 @@
 
 1.  Briefly describe some of the differences between a Class/Stateful component and a Functional/Presentational component.
 
+> Both Class/Stateful and Functional/Presentational components are flexable and can be called when needed. A Functional/Presentational is used to display components. A Class/Stateful also displays components, as well class/stateful components can call functions/events to modifiy the state of the component. While a Functional/Presentational is dynamic it requires a Class/Stateful compnent to actually change the state of the displayed final application.
+
 1.  Describe state.
 
 1.  Describe props.
