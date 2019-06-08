@@ -4,13 +4,13 @@ class StarWarsData extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        starwarsCharData: this.getCharacterData('https://swapi.co/api/people/1')
+        starwarsCharData: {}
       };
     }
 
-    // componentDidMount() {
-    //     this.getCharacterData('https://swapi.co/api/people/1');
-    //   }
+    componentDidMount() {
+        this.getCharacterData('https://swapi.co/api/people/1');
+      }
   
     getCharacterData = URL => {
       fetch(URL)
