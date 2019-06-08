@@ -9,7 +9,7 @@ function StarWars(props) {
     return (
         <div className="main">
             <StarWarsList list={props.list} />
-            <StarWarsData selectCharacter={props.selectCharacter} />
+            <StarWarsData list={props.list} selectCharacter={props.selectCharacter} />
         </div>
     );
 }

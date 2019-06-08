@@ -6,7 +6,8 @@ function StarWarsData(props) {
 
     return (
         <div className="displayData">
-            Select a Character to Display more information.
+            Select a Character to Display more information.            
+            {console.log(props.list.name)}
         </div>
     );
 }
