@@ -37,7 +37,7 @@ class StarWarsList extends Component {
             <div className="datalist">
                 {props.list.map( item => {
                     return (
-                    <StarWarsCharacterData character={item} key={item.id} />
+                    <StarWarsCharacterData character={item} key={item.url} />
                 );})}
             </div>
         );

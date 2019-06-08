@@ -9,9 +9,11 @@ function StarWars(props) {
     return (
         <div className="main">
             <StarWarsList list={props.list} />
-            <StarWarsData list={props.list} selectCharacter={props.selectCharacter} />
+            <StarWarsData />
         </div>
     );
 }
 
 export default StarWars;
+
+// <StarWarsData list={props.list} selectCharacter={props.selectCharacter} />

@@ -9,7 +9,7 @@ function StarWarsList(props) {
             <ul>
                 {props.list.map( item => {
                     return (
-                    <StarWarsCharacter character={item} key={item.id} />
+                    <StarWarsCharacter character={item} key={item.url} />
                 );})}
             </ul>
         </div>

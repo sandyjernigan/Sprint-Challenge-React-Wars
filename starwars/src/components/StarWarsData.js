@@ -1,14 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-// Have at least one list element for each star wars character in the data set.
+class StarWarsData extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        starwarsCharData: this.getCharacterData('https://swapi.co/api/people/1')
+      };
+    }
 
-function StarWarsData(props) {
+    // componentDidMount() {
+    //     this.getCharacterData('https://swapi.co/api/people/1');
+    //   }
+  
+    getCharacterData = URL => {
+      fetch(URL)
+        .then(res => {
+          return res.json();
+        })
+        .then(data => {
+          this.setState({ starwarsCharData: data.results });
+        })
+        .catch(err => {
+          // throw new Error(err);
+        });
+    };
+  
+    render() {
 
-    return (
-        <div className="displayData">
-            Select a Character to Display more information.            
-            {console.log(props.list.name)}
-        </div>
-    );
+        return (
+            <div className="displayData">
+                <p>Select a Character to Display more information.</p>
+                {/* <p>Name: {this.state.starwarsCharData.name}</p> */}
+            </div>
+        );
+    }
 }
+
 export default StarWarsData;
