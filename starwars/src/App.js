@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import StarWarsList from './components/StarWarsList';
 import './App.css';
 
 class App extends Component {
@@ -33,13 +34,15 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        <StarWarsList list={this.state.starwarsChars} />
       </div>
     );
   }
 }
 
 export default App;
-// Break Down - This App should
+
+// Break Down - This App should ... 
 
 // A list of Star Wars Characters rendered to the screen.
   // Component StarWarsList.js -- to hold the list of charcters
