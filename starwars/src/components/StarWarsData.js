@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// Using URL: {this.state.starwarsCharData.url} to display more information
+
 class StarWarsData extends Component {
     constructor(props) {
       super(props);
@@ -9,7 +11,7 @@ class StarWarsData extends Component {
     }
 
     componentDidMount() {
-        this.getCharacterData('https://swapi.co/api/people/1');
+        this.getCharacterData(this.props.url);
       }
   
     getCharacterData = URL => {
@@ -48,3 +50,7 @@ export default StarWarsData;
 
 // more JSON results - will need other components to display
   // Home World: {this.state.starwarsCharData.homeworld}
+  // Films: {this.state.starwarsCharData.films}
+  // Species: {this.state.starwarsCharData.species}
+  // Vehicles: {this.state.starwarsCharData.vehicles}
+  // Starships: {this.state.starwarsCharData.starships}

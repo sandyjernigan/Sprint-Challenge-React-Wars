@@ -6,7 +6,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      starwarsCharUrl: 'https://swapi.co/api/people/1'
     };
   }
 
@@ -34,7 +35,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        <StarWars list={this.state.starwarsChars} selectCharacter={this.getCharacters} />
+        <StarWars list={this.state.starwarsChars} selectCharacter={this.getCharacters} url={this.state.starwarsCharUrl}/>
       </div>
     );
   }

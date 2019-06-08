@@ -9,7 +9,7 @@ function StarWars(props) {
     return (
         <div className="main">
             <StarWarsList list={props.list} />
-            <StarWarsData />
+            <StarWarsData url={props.url}/>
         </div>
     );
 }
