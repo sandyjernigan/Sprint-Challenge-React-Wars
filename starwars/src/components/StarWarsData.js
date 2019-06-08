@@ -18,10 +18,11 @@ class StarWarsData extends Component {
           return res.json();
         })
         .then(data => {
-          this.setState({ starwarsCharData: data.results });
+          this.setState({ starwarsCharData: data });
         })
         .catch(err => {
           // throw new Error(err);
+          console.log(err);
         });
     };
   
@@ -29,11 +30,21 @@ class StarWarsData extends Component {
 
         return (
             <div className="displayData">
-                <p>Select a Character to Display more information.</p>
-                {/* <p>Name: {this.state.starwarsCharData.name}</p> */}
+                <h4>Select a Character to Display more information.</h4>
+                <p>Name: {this.state.starwarsCharData.name}</p>
+                <p>Gender: {this.state.starwarsCharData.gender}</p>
+                <p>Height: {this.state.starwarsCharData.height}</p>
+                <p>Mass: {this.state.starwarsCharData.mass}</p>
+                <p>Hair Color: {this.state.starwarsCharData.hair_color}</p>
+                <p>Skin Color: {this.state.starwarsCharData.skin_color}</p>
+                <p>Eye Color: {this.state.starwarsCharData.eye_color}</p>
+                {/* <p>Home World: {this.state.starwarsCharData.homeworld}</p> This is another json result....  */}
             </div>
         );
     }
 }
 
 export default StarWarsData;
+
+// more JSON results - will need other components to display
+  // Home World: {this.state.starwarsCharData.homeworld}

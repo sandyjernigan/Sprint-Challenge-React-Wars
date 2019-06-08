@@ -29,3 +29,10 @@
     background-color: rgba(240, 240, 240, 0.7);  
     border-radius: 0 1em 1em 0;
 }
+    h4 { 
+        margin: 0;
+        padding: 0;
+    }
+    .displayData p {
+        text-align: left;
+    }
