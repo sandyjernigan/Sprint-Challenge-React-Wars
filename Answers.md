@@ -27,3 +27,5 @@
 > State likes props can be changed and passed to other components. The state of the application is the currently display. This display (the state) can be changed and controlled by the component of the application.
 
 5.  Describe props.
+
+> Props are elements that can be passed to other components. Props can be just about anything including: objects, arrays, variables, and functions.
