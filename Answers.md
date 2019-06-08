@@ -6,6 +6,8 @@
 
 1.  What does it mean to _think_ in react?
 
+> To Think in react is a matter of considering what you want the page to display, how to break up that display into parts, what elements need to be passed between parts, and what elements need to be able to change.
+
 1.  Briefly describe some of the differences between a Class/Stateful component and a Functional/Presentational component.
 
 1.  Describe state.
