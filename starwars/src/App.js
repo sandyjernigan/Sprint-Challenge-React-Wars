@@ -7,19 +7,20 @@ class App extends Component {
     super();
     this.state = {
       starwarsChars: [],
+      starwarsCharData: {}, 
       starwarsCharUrl: 'https://swapi.co/api/people/1'
     };
   }
 
   getCharacterURL = url => {
     // (url === '') ? url = 'https://swapi.co/api/people/1' : url = url ;
-    console.log('App clicked: ' + url );
     this.setState({ starwarsCharUrl: url });
-    this.setState({ state: this.state });
+    this.getCharacterData(this.state.starwarsCharUrl);
   }
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
+    this.getCharacterData(this.state.starwarsCharUrl);
   }
 
   getCharacters = URL => {
@@ -37,6 +38,20 @@ class App extends Component {
         throw new Error(err);
       });
   };
+  
+  getCharacterData = URL => {
+    fetch(URL)
+      .then(res => {
+        return res.json();
+      })
+      .then(data => {
+        this.setState({ starwarsCharData: data });
+      })
+      .catch(err => {
+        // throw new Error(err);
+        console.log(err);
+      });
+  };
 
   render() {
     console.log(this.state.starwarsCharUrl);
@@ -45,8 +60,9 @@ class App extends Component {
         <h1 className="Header">React Wars</h1>
         <StarWars 
           list={this.state.starwarsChars} 
-          url={this.state.starwarsCharUrl} 
+          characterData={this.state.starwarsCharData}
           selectCharacter={this.getCharacters} 
+          getCharacterData={this.getCharacterData}
           getCharacterURL={this.getCharacterURL} />
       </div>
     );

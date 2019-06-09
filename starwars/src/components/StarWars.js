@@ -8,8 +8,8 @@ import './StarWars.css';
 function StarWars(props) {
     return (
         <div className="main">
-            <StarWarsList list={props.list} getCharacterURL={props.getCharacterURL} />
-            <StarWarsData url={props.url}/>
+            <StarWarsList list={props.list} getCharacterData={props.getCharacterData} />
+            <StarWarsData characterData={props.characterData}/>
         </div>
     );
 }

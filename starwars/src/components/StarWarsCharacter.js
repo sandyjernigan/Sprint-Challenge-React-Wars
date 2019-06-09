@@ -6,7 +6,7 @@ function StarWarsCharacter(props) {
 
     const clickHandler = () => {
         // I'd like a clickHandler when clicked pulls up more data... 
-        props.getCharacterURL(props.character.url);
+        props.getCharacterData(props.character.url);
     };
 
     return (
