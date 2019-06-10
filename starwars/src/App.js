@@ -12,12 +12,6 @@ class App extends Component {
     };
   }
 
-  getCharacterURL = url => {
-    // (url === '') ? url = 'https://swapi.co/api/people/1' : url = url ;
-    this.setState({ starwarsCharUrl: url });
-    this.getCharacterData(this.state.starwarsCharUrl);
-  }
-
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
     this.getCharacterData(this.state.starwarsCharUrl);
@@ -62,8 +56,7 @@ class App extends Component {
           list={this.state.starwarsChars} 
           characterData={this.state.starwarsCharData}
           selectCharacter={this.getCharacters} 
-          getCharacterData={this.getCharacterData}
-          getCharacterURL={this.getCharacterURL} />
+          getCharacterData={this.getCharacterData} />
       </div>
     );
   }

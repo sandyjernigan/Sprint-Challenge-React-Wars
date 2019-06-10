@@ -13,7 +13,6 @@ function StarWarsData(props) {
         <p>Hair Color: {props.characterData.hair_color}</p>
         <p>Skin Color: {props.characterData.skin_color}</p>
         <p>Eye Color: {props.characterData.eye_color}</p>
-        {/* <p>Home World: {props.characterData.homeworld}</p> This is another json result....  */}
     </div>
   );
 }

@@ -15,5 +15,3 @@ function StarWars(props) {
 }
 
 export default StarWars;
-
-// <StarWarsData list={props.list} selectCharacter={props.selectCharacter} />
