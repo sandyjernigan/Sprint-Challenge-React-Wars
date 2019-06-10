@@ -8,6 +8,7 @@ class App extends Component {
     this.state = {
       starwarsChars: [],
       starwarsCharData: {}, 
+      starwarsURL: 'https://swapi.co/api/people/',
       starwarsCharUrl: 'https://swapi.co/api/people/1'
     };
   }
@@ -18,7 +19,7 @@ class App extends Component {
   }
 
   getCharacters = URL => {
-    // feel free to research what this code is doing.
+    // feel free to research what this code is doing. 
     // At a high level we are calling an API to fetch some starwars data from the open web.
     // We then take that data and resolve it our state.
     fetch(URL)
@@ -29,7 +30,7 @@ class App extends Component {
         this.setState({ starwarsChars: data.results });
       })
       .catch(err => {
-        throw new Error(err);
+        //throw new Error(err);
       });
   };
   
@@ -48,7 +49,6 @@ class App extends Component {
   };
 
   render() {
-    console.log(this.state.starwarsCharUrl);
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
