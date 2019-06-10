@@ -8,7 +8,13 @@ import './StarWars.css';
 function StarWars(props) {
     return (
         <div className="main">
-            <StarWarsList list={props.list} selectCharacter={props.selectCharacter} getCharacterData={props.getCharacterData} />
+            <StarWarsList 
+                list={props.list} 
+                nextPage={props.nextPage} 
+                previousPage={props.previousPage} 
+                selectCharacter={props.selectCharacter} 
+                getCharacterData={props.getCharacterData} 
+            />
             <StarWarsData characterData={props.characterData}/>
         </div>
     );

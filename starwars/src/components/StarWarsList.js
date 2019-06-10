@@ -5,9 +5,9 @@ import StarWarsCharacter from './StarWarsCharacter';
     
 function StarWarsList(props) {
 
-    const pageHandlerLeft = () => { };
+    const pageHandlerLeft = () => props.selectCharacter(props.previousPage);
 
-    const pageHandlerRight = () => { };
+    const pageHandlerRight = () => props.selectCharacter(props.nextPage);
 
     return (
         <div className="list">

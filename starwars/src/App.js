@@ -8,6 +8,8 @@ class App extends Component {
     this.state = {
       starwarsChars: [],
       starwarsCharData: {}, 
+      starwarsNextPage: null,
+      starwarsPreviousPage: null,
       starwarsURL: 'https://swapi.co/api/people/',
       starwarsCharUrl: 'https://swapi.co/api/people/1'
     };
@@ -28,6 +30,8 @@ class App extends Component {
       })
       .then(data => {
         this.setState({ starwarsChars: data.results });
+        this.setState({ starwarsNextPage: data.next });
+        this.setState({ starwarsPreviousPage: data.previous });
       })
       .catch(err => {
         //throw new Error(err);
@@ -55,6 +59,8 @@ class App extends Component {
         <StarWars 
           list={this.state.starwarsChars} 
           characterData={this.state.starwarsCharData}
+          nextPage={this.state.starwarsNextPage} 
+          previousPage={this.state.starwarsPreviousPage} 
           selectCharacter={this.getCharacters} 
           getCharacterData={this.getCharacterData} />
       </div>
