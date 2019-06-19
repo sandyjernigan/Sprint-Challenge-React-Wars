@@ -1,6 +1,5 @@
 import React from 'react';
 import StarWarsCharacter from './StarWarsCharacter';
-import './StarWars.css';
 
 // A list of Star Wars Characters rendered to the screen.
     

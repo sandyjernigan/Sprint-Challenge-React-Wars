@@ -1,22 +1,31 @@
 /* styles for star wars list of characters */
-.list {
-    min-width: 400px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 1em;
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.list, .displayData {
     box-shadow:0 0 1em rgba(0,0,0,.25);
     box-sizing:border-box;
     padding:5vmin;
-    position:fixed;
     text-align:center;
-    left:50%;
-    transform:translate(-50%, 0);
 }
-.list ul {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
+
+.list {
+    border-radius: 1em 0 0 1em;
+    background-color: rgba(255, 255, 255, 0.8);
 }
-.list li {
-    padding: 5px;
-    font-weight: bolder;
+    .list ul {
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+    }
+        .list li {
+            padding: 5px;
+            font-weight: bolder;
+        }
+
+.displayData {
+    background-color: rgba(240, 240, 240, 0.7);  
+    border-radius: 0 1em 1em 0;
 }
